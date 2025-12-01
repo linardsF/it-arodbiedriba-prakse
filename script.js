@@ -18,10 +18,10 @@ async function fetchTasks() {
 
     const tasksDiv = document.getElementById('tasks');
     tasksDiv.innerHTML = data.map(task =>
-        `<div>
+        `<div class="task-card">
             <h3>${task.name}</h3>
-            <p>Apraksts: ${task.description}</p>
-            <p>Statuss: ${task.status}</p>
+            <p><strong>Apraksts:</strong> ${task.description}</p>
+            <p><strong>Statuss:</strong> ${task.status}</p>
         </div>`
     ).join('');
 }
