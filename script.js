@@ -17,13 +17,20 @@ async function fetchTasks() {
     }
 
     const tasksDiv = document.getElementById('tasks');
-    tasksDiv.innerHTML = data.map(task =>
-        `<div class="task-card">
+    tasksDiv.innerHTML = data.map(task => {
+        
+        
+        let statusClass = "status-other";
+        if (task.status === "active") statusClass = "status-active";
+        if (task.status === "pending") statusClass = "status-pending";
+
+        return `
+        <div class="task-card">
             <h3>${task.name}</h3>
             <p><strong>Apraksts:</strong> ${task.description}</p>
-            <p><strong>Statuss:</strong> ${task.status}</p>
-        </div>`
-    ).join('');
+            <p><strong>Statuss:</strong> <span class="${statusClass}">${task.status}</span></p>
+        </div>`;
+    }).join('');
 }
 
 fetchTasks();
