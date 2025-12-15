@@ -5,7 +5,7 @@
 - CSS: Pamata stili.
 - JavaScript: Loģika datu nolasīšanai.
 - Supabase: Mākoņdatubāze datu glabāšanai un API.
-- GitHub Pages — projekta hostings
+- GitHub Pages — projekta hostings.
 - GitHub — versiju kontrole (branches, commits, pull request)
 
 
